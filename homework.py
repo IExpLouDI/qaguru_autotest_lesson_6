@@ -96,5 +96,8 @@ def find_registration_button_on_login_page(page_url, button_text):
 
 
 def return_function_info(object_, *params):
-    return ' '.join(([word.capitalize() for word in object_.__name__.split("_")]
+    result = ' '.join(([word.capitalize() for word in object_.__name__.split("_")]
                               + [f"{list(params)}"])).replace("'", "")
+    print(result)
+
+    return result
